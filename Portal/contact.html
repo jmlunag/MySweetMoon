@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Contactos-MySweetMoon</title>
+    <link rel="icon" href="img/logo.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Prata&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" href="css/introjs.css">
+    <link rel="stylesheet" href="css/introjs-rtl.css">
+  </head>
+  <body>
+  	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light ftco-navbar-light-2" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html"><span class="flaticon-lotus"></span>MySweetMoon</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menú
+	      </button>
+
+
+		  <div class="collapse navbar-collapse" id="ftco-nav">
+			<ul id="navbar" class="navbar-nav ml-auto">
+				<li v-for="elem in enlaces" class="nav-item">
+					<a v-bind:href="elem.enlace" class="nav-link">{{ elem.texto }}</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="login.html">
+						<i class="fa fa-sign-out" aria-hidden="true"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+		
+
+		  </div>
+	  </nav>
+    <!-- END nav -->
+
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('img/portada2.jpg');">
+		<div class="container">
+		  <div class="row slider-text  align-items-center justify-content-center">
+			     <div class="col-md-9 ftco-animate text-center">
+			          <h1 class="mb-3 bread">Contacto</h1>
+                <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Inicio</a></span> <span>Contacto</span></p>
+			     </div>
+		  </div>
+		</div>
+	  </section>
+
+	  <section class="ftco-section contact-section">
+		<div class="container">
+		  <div class="row block-9">
+					  <div id="pas1" class="col-md-4 contact-info ftco-animate bg-light p-4">
+						  <div class="row">
+							  <div class="col-md-12 mb-4">
+					<h2 class="h4">Información de Contacto</h2>
+				</div>
+
+				  <div class="col-md-12 mb-3">
+					<p><span>Dirección:</span> Cdla. Las Terrazas, mz. B villa 15.</p>
+				  </div>
+				  <div class="col-md-12 mb-3">
+					<p><span>Teléfono:</span> <a href="tel://1234567920">+ 593 98 324 6820</a></p>
+				  </div>
+				  <div class="col-md-12 mb-3">
+					<p><span>Correo:</span> <a href="mailto:mysweetmoon.ec@gmail.com">mysweetmoon.ec@gmail.com</a></p>
+				</div>
+				<div class= "col-md-12">
+				  <p><span>Encuéntranos:</span></p>
+				  <div id="map" class="map"></div>
+				</div>
+						  </div>
+            </div>
+
+					  <div class="col-md-1"></div>
+			<div id="pas2" class="col-md-6 ftco-animate">
+			  <form class="contact-form" id="contact">
+          <!-- @submit.prevent="processForm" eso va arriba -->
+				  <div class="row">
+					<div class="col-md-6 form-content">
+					  <input type="text" id="name" name="name" v-model="name" class="form-control" placeholder="Tu Nombre" required>
+					</div>
+
+					<div class="col-md-6 form-content">
+					  <input type="text" id="lastname" name="lastname" v-model="lastname" class="form-control" placeholder="Tu Apellido" required>
+					</div>
+
+					<div class="col-md-6 form-content">
+					  <input type="tel" id="phone" name="phone" v-model="phone" class="form-control" pattern="[+593]?[0-9]{10}"
+					  placeholder="Tu Celular" title="Teléfono de 10 dígitos" required>
+					</div>
+
+					<div class="col-md-6 form-content">
+					  <input type="email" id="email" name="email" v-model="email" class="form-control" placeholder="Tu Email" required>
+					</div>
+
+					<div class="form-content col-md-6">
+					  <label class="">Fecha de Nacimiento: </label>
+					</div>
+
+					<div class="col-md-6 form-content">
+					  <input type="date" id="date" name="date" v-model="date" class="form-control" required>
+					</div>
+
+					<div class="col-md-12 form-content" id='prueba'>
+					  <textarea id="message" name="message" v-model="message" cols="30" rows="7" class="form-control" placeholder="Mensaje" required></textarea>
+					</div>
+
+					<div class="col-md-12 form-content">
+					  <button  v-on:click="processForm()"  type="button" class="btn btn-primary py-3 px-5" id="contact-btn">Enviar Mensaje</button>
+					</div>
+			  </div>
+			  </form>
+			</div>
+		  </div>
+		</div>
+	  </section>
+
+    <footer id="footer" class="ftco-footer ftco-section">
+    </footer>
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+  <script src="js/jquery.min.js"></script>
+	<script src="js/vue.js"></script>
+	<script src="js/general.js"></script>
+
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key="></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/vue.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+  <script src="js/message-contact.js"></script>
+
+  <script src="js/intro.js"></script>
+  <script src="js/guiaContactos.js"></script>
+
+</body>
+</html>
