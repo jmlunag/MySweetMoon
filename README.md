@@ -1,10 +1,5 @@
 # MySweetMoon
 
-# Integrantes
-* Jocellyn Luna
-* Bryan Manzano
-* Ivan Torres
-
 # Instalar servidor
 
 - Instalar NodeJs
