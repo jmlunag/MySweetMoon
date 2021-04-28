@@ -12,7 +12,7 @@
 
 - Ejecutar servidor: nodemon index.js
 
-- Para probar el servidor(puerto 3000), se puede colocar http://localhost:3000/productos/ta en el navegador.
+- Para probar el servidor(puerto 3000)
 
 # Uso de Portal
 
